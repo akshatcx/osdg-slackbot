@@ -1,0 +1,4 @@
+DEBUG = True
+DEFAULT_REPLY = "Sorry but I didn't understand you"
+ERRORS_TO = 'Akshat Chhajer'
+API_TOKEN = '<slack-api-token>'
