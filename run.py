@@ -19,18 +19,16 @@ def audit_log(message, sent_message):
 @respond_to('^help$', re.IGNORECASE)
 @respond_to('^help (.*)$', re.IGNORECASE)
 def help(message, command=None):
-"""
- _______  _______  ______   _______ 
-(  ___  )(  ____ \(  __  \ (  ____ \
-| (   ) || (    \/| (  \  )| (    \/
-| |   | || (_____ | |   ) || |      
-| |   | |(_____  )| |   | || | ____ 
-| |   | |      ) || |   ) || | \_  )
-| (___) |/\____) || (__/  )| (___) |
-(_______)\_______)(______/ (_______)
+    art = """
+   ____   _____ _____   _____ 
+  / __ \ / ____|  __ \ / ____|
+ | |  | | (___ | |  | | |  __ 
+ | |  | |\___ \| |  | | | |_ |
+ | |__| |____) | |__| | |__| |
+  \____/|_____/|_____/ \_____|
+"""                              
 
-*Beep-boop-beep* I am the OSDG bot and I am here to help you!
-"""
+    reply = "*Beep-boop-beep* I am the OSDG bot and I am here to help you!"
 
 #Command Usage: help [command]
 #    """
@@ -42,7 +40,7 @@ def help(message, command=None):
 #            if c.__name__ == command:
 #              message.reply('```' + c.__doc__ + '```')
 #              return
-#    message.reply('```ERROR: Unknown Usage!\n' + help.__doc__ + '```')
+    message.reply(f'```{art}```{reply}')
 
 def main():
     bot = Bot()
