@@ -13,7 +13,7 @@ import requests
 
 @respond_to('(.*)$')
 def audit_log(message, sent_message):
-    print("COMMAND:" + sent_message)
+    print(f"COMMAND '{sent_message}' FROM '{message.user['name']}'")
 
 @respond_to('^hi$', re.IGNORECASE)
 @respond_to('^help$', re.IGNORECASE)
