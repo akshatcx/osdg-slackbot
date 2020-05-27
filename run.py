@@ -42,6 +42,11 @@ def help(message, command=None):
 #              return
     message.reply(f'```{art}```{reply}')
 
+@respond_to('Are we on a roll?', re.IGNORECASE)
+def on_roll(message):
+    on_roll_img = "media/on_roll.png"
+    message.channel.upload_file(f"We are on a roll!!", on_roll_img)
+
 def main():
     bot = Bot()
     bot.run()
